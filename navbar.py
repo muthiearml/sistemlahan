@@ -13,6 +13,7 @@ def create_navbar():
             dbc.NavItem(dbc.NavLink("Data Points", href="/Find_Data_Points")),
             dbc.NavItem(dbc.NavLink("Relationship", href="/Relationship")),
             dbc.NavItem(dbc.NavLink("Cluster Count", href="/Cluster")),
+            dbc.NavItem(dbc.NavLink("Cluster Profile", href="/Cluster_Profile")),
             dbc.NavItem(dbc.NavLink("Prediction", href="/Prediction")),
             dbc.NavItem(
                 dbc.NavLink(
@@ -20,7 +21,7 @@ def create_navbar():
                         html.I(className="fa-brands fa-github"),  # Font Awesome Icon
                         " "  # Text beside icon
                     ],
-                    href="[YOUR GITHUB PROFILE URL]",
+                    href="https://github.com/ds-raw/spk1",
                     target="_blank"
                 )
 

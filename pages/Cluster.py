@@ -16,7 +16,7 @@ register_page(
     path='/Cluster'
 )
 ####################### DATASET #############################
-df = pd.read_excel("New Model 3_Clusters ver 2.xlsx")
+df = pd.read_excel("New Model 6_Clusters.xlsx")
 
 ####################### BAR CHART #############################
 def create_bar_chart(col_name="Peruntukan"):
