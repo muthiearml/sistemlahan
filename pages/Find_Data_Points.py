@@ -28,7 +28,7 @@ register_page(
 
 # DATASET
 try:
-    df = pd.read_excel("New Model 3_Clusters ver 2.xlsx")
+    df = pd.read_excel("New Model 6_Clusters.xlsx")
 except Exception as e:
     df = pd.DataFrame()  # Fallback to an empty dataframe if loading fails
     print(f"Error loading dataset: {e}")
