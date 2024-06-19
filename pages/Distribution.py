@@ -13,7 +13,7 @@ register_page(
 )
 
 # Load dataset
-df = pd.read_excel("New Model 3_Clusters ver 2.xlsx")
+df = pd.read_excel("New Model 6_Clusters.xlsx")
 # Distribution chart function
 # set average score and row id
 df['Provinsi'] = df.index
