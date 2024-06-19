@@ -17,7 +17,7 @@ register_page(
 )
 
 ####################### DATASET #############################
-df = pd.read_excel("New Model 3_Clusters ver 2.xlsx")
+df = pd.read_excel("New Model 6_Clusters.xlsx")
 
 ####################### SCATTER CHART #############################
 def create_scatter_chart(x_axis="Peruntukan", y_axis="LT (m2)", color_axis="Clusters"):
