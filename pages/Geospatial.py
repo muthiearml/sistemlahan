@@ -19,7 +19,7 @@ register_page(
 
 # DATASET
 try:
-    df = pd.read_excel("New Model 3_Clusters ver 2.xlsx")
+    df = pd.read_excel("New Model 6_Clusters.xlsx")
 except Exception as e:
     df = pd.DataFrame()  # Fallback to an empty dataframe if loading fails
     print(f"Error loading dataset: {e}")
@@ -78,15 +78,16 @@ listrik_dropdown = dcc.Dropdown(id='ada-listrik-dropdown', options=listrik_optio
 
 # PAGE LAYOUT
 layout = html.Div(children=[
-    html.H3('Geospatial Analysis' ,style={'text-align': 'center'}),
+    html.H3('Geospatial Analysis', style={'text-align': 'center'}),
     dbc.Row([
         dbc.Col(peruntukan_dropdown, width=3),
         dbc.Col(kondisi_wilayah_dropdown, width=3),
         dbc.Col(air_dropdown, width=3),
         dbc.Col(listrik_dropdown, width=3)
- 
-    ]),
-    dcc.Graph(id="map_chart")
+    ], className='mb-4'),
+    dbc.Row([
+        dbc.Col(dcc.Graph(id="map_chart"), width=12)
+    ])
 ])
 
 # CALLBACKS
