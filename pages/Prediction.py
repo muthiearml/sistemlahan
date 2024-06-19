@@ -27,8 +27,8 @@ register_page(
 )
 ####################### DATASET #############################
 # Load the model from the file
-loaded_model = joblib.load("New Model 3 Clusters ver 2.joblib")
-loaded_scaler = joblib.load('New Model 3 Clusters Scaler ver 2.joblib')
+loaded_model = joblib.load("New Model 6 Clusters.joblib")
+loaded_scaler = joblib.load('New Model 6 Clusters Scaler.joblib')
 
 ####################### PAGE LAYOUT #############################
 # Updated layout with dropdown options based on one-hot encoding
@@ -127,7 +127,7 @@ dbc.Card(
              dcc.Dropdown(
                  id='clusters-dropdown',
                  options=[
-                     {'label': f'Cluster_{i}', 'value': i} for i in range(3)
+                     {'label': f'Cluster_{i}', 'value': i} for i in range(6)
                  ],
                  placeholder='Select Clusters'
              ),
@@ -390,7 +390,7 @@ def update_prediction(n_clicks, lt_input, air_label_input, listrik_label_input, 
 def make_predictions(scaler, model, new_data):
     # Define all feature names used during training
     all_features = ['LT (m2)', 'Air_Label', 'Listrik_Label', 'Distance_Category_Label', 'Lebar Jalan Depan (m)']
-    all_features += [f'Clusters_{i}' for i in range(3)]
+    all_features += [f'Clusters_{i}' for i in range(6)]
     all_features += ['Peruntukan_Fasilitas Umum', 'Peruntukan_Kawasan Industri',
                      'Peruntukan_Kawasan Perdagangan dan Jasa', 'Peruntukan_Kawasan Peruntukan Perkebunan',
                      'Peruntukan_Pemukiman Perkotaan']
